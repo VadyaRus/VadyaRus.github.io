@@ -1,3 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
 .header {
     background-color: #f1f1f1;
     text-align: center;
@@ -27,29 +56,11 @@
     background-color: #ddd;
 }
 
-/* Create three equal columns that float next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-}
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 900px) {
-    .column {
-      width: 50%;
-    }
-}
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
 }
 
 .footer {
@@ -61,12 +72,7 @@
     padding: 10px;
 }
 
-@font-face {
-    font-family: VisbyRoundCF;
-    src: url(fonts/VisbyRoundCF-Regular.otf);
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url(fonts/Roboto-Medium.ttf);
+img {
+    width: 100%;
+    height: auto;
 }
