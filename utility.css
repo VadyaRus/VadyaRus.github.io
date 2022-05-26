@@ -1,0 +1,117 @@
+.vadya-left{float:left!important}
+.vadya-right{float:right!important}
+
+/* Animation */
+.vadya-spin{animation:vadya-spin 2s infinite linear}@keyframes vadya-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.vadya-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.vadya-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.vadya-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.vadya-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.vadya-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.vadya-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.vadya-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.vadya-animate-input{transition:width 0.4s ease-in-out}.vadya-animate-input:focus{width:100%!important}
+
+.vadya-container,.vadya-panel{padding:0.01em 16px}.vadya-panel{margin-top:16px;margin-bottom:16px}
+
+/* Size */
+.vadya-tiny{font-size:10px!important}
+.vadya-small{font-size:12px!important}
+.vadya-medium{font-size:15px!important}
+.vadya-large{font-size:18px!important}
+.vadya-xlarge{font-size:24px!important}
+.vadya-xxlarge{font-size:36px!important}
+.vadya-xxxlarge{font-size:48px!important}
+.vadya-jumbo{font-size:64px!important}
+
+/* Alignment */
+.vadya-left-align{text-align:left!important}
+.vadya-right-align{text-align:right!important}
+.vadya-justify{text-align:justify!important}
+.vadya-center{text-align:center!important}
+
+/* Colors */
+.vadya-amber,.vadya-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.vadya-aqua,.vadya-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.vadya-blue,.vadya-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.vadya-light-blue,.vadya-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.vadya-brown,.vadya-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.vadya-cyan,.vadya-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.vadya-blue-grey,.vadya-hover-blue-grey:hover,.vadya-blue-gray,.vadya-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.vadya-green,.vadya-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.vadya-light-green,.vadya-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.vadya-indigo,.vadya-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.vadya-khaki,.vadya-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.vadya-lime,.vadya-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.vadya-orange,.vadya-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.vadya-deep-orange,.vadya-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.vadya-pink,.vadya-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.vadya-purple,.vadya-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.vadya-deep-purple,.vadya-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.vadya-red,.vadya-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.vadya-sand,.vadya-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.vadya-teal,.vadya-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+.vadya-yellow,.vadya-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.vadya-white,.vadya-hover-white:hover{color:#000!important;background-color:#fff!important}
+.vadya-black,.vadya-hover-black:hover{color:#fff!important;background-color:#000!important}
+.vadya-grey,.vadya-hover-grey:hover,.vadya-gray,.vadya-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+.vadya-light-grey,.vadya-hover-light-grey:hover,.vadya-light-gray,.vadya-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.vadya-dark-grey,.vadya-hover-dark-grey:hover,.vadya-dark-gray,.vadya-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.vadya-pale-red,.vadya-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.vadya-pale-green,.vadya-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.vadya-pale-yellow,.vadya-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.vadya-pale-blue,.vadya-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+.vadya-text-amber,.vadya-hover-text-amber:hover{color:#ffc107!important}
+.vadya-text-aqua,.vadya-hover-text-aqua:hover{color:#00ffff!important}
+.vadya-text-blue,.vadya-hover-text-blue:hover{color:#2196F3!important}
+.vadya-text-light-blue,.vadya-hover-text-light-blue:hover{color:#87CEEB!important}
+.vadya-text-brown,.vadya-hover-text-brown:hover{color:#795548!important}
+.vadya-text-cyan,.vadya-hover-text-cyan:hover{color:#00bcd4!important}
+.vadya-text-blue-grey,.vadya-hover-text-blue-grey:hover,.vadya-text-blue-gray,.vadya-hover-text-blue-gray:hover{color:#607d8b!important}
+.vadya-text-green,.vadya-hover-text-green:hover{color:#4CAF50!important}
+.vadya-text-light-green,.vadya-hover-text-light-green:hover{color:#8bc34a!important}
+.vadya-text-indigo,.vadya-hover-text-indigo:hover{color:#3f51b5!important}
+.vadya-text-khaki,.vadya-hover-text-khaki:hover{color:#b4aa50!important}
+.vadya-text-lime,.vadya-hover-text-lime:hover{color:#cddc39!important}
+.vadya-text-orange,.vadya-hover-text-orange:hover{color:#ff9800!important}
+.vadya-text-deep-orange,.vadya-hover-text-deep-orange:hover{color:#ff5722!important}
+.vadya-text-pink,.vadya-hover-text-pink:hover{color:#e91e63!important}
+.vadya-text-purple,.vadya-hover-text-purple:hover{color:#9c27b0!important}
+.vadya-text-deep-purple,.vadya-hover-text-deep-purple:hover{color:#673ab7!important}
+.vadya-text-red,.vadya-hover-text-red:hover{color:#f44336!important}
+.vadya-text-sand,.vadya-hover-text-sand:hover{color:#fdf5e6!important}
+.vadya-text-teal,.vadya-hover-text-teal:hover{color:#009688!important}
+.vadya-text-yellow,.vadya-hover-text-yellow:hover{color:#d2be0e!important}
+.vadya-text-white,.vadya-hover-text-white:hover{color:#fff!important}
+.vadya-text-black,.vadya-hover-text-black:hover{color:#000!important}
+.vadya-text-grey,.vadya-hover-text-grey:hover,.vadya-text-gray,.vadya-hover-text-gray:hover{color:#757575!important}
+.vadya-text-light-grey,.vadya-hover-text-light-grey:hover,.vadya-text-light-gray,.vadya-hover-text-light-gray:hover{color:#f1f1f1!important}
+.vadya-text-dark-grey,.vadya-hover-text-dark-grey:hover,.vadya-text-dark-gray,.vadya-hover-text-dark-gray:hover{color:#3a3a3a!important}
+.vadya-border-amber,.vadya-hover-border-amber:hover{border-color:#ffc107!important}
+.vadya-border-aqua,.vadya-hover-border-aqua:hover{border-color:#00ffff!important}
+.vadya-border-blue,.vadya-hover-border-blue:hover{border-color:#2196F3!important}
+.vadya-border-light-blue,.vadya-hover-border-light-blue:hover{border-color:#87CEEB!important}
+.vadya-border-brown,.vadya-hover-border-brown:hover{border-color:#795548!important}
+.vadya-border-cyan,.vadya-hover-border-cyan:hover{border-color:#00bcd4!important}
+.vadya-border-blue-grey,.vadya-hover-border-blue-grey:hover,.vadya-border-blue-gray,.vadya-hover-border-blue-gray:hover{border-color:#607d8b!important}
+.vadya-border-green,.vadya-hover-border-green:hover{border-color:#4CAF50!important}
+.vadya-border-light-green,.vadya-hover-border-light-green:hover{border-color:#8bc34a!important}
+.vadya-border-indigo,.vadya-hover-border-indigo:hover{border-color:#3f51b5!important}
+.vadya-border-khaki,.vadya-hover-border-khaki:hover{border-color:#f0e68c!important}
+.vadya-border-lime,.vadya-hover-border-lime:hover{border-color:#cddc39!important}
+.vadya-border-orange,.vadya-hover-border-orange:hover{border-color:#ff9800!important}
+.vadya-border-deep-orange,.vadya-hover-border-deep-orange:hover{border-color:#ff5722!important}
+.vadya-border-pink,.vadya-hover-border-pink:hover{border-color:#e91e63!important}
+.vadya-border-purple,.vadya-hover-border-purple:hover{border-color:#9c27b0!important}
+.vadya-border-deep-purple,.vadya-hover-border-deep-purple:hover{border-color:#673ab7!important}
+.vadya-border-red,.vadya-hover-border-red:hover{border-color:#f44336!important}
+.vadya-border-sand,.vadya-hover-border-sand:hover{border-color:#fdf5e6!important}
+.vadya-border-teal,.vadya-hover-border-teal:hover{border-color:#009688!important}
+.vadya-border-yellow,.vadya-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.vadya-border-white,.vadya-hover-border-white:hover{border-color:#fff!important}
+.vadya-border-black,.vadya-hover-border-black:hover{border-color:#000!important}
+.vadya-border-grey,.vadya-hover-border-grey:hover,.vadya-border-gray,.vadya-hover-border-gray:hover{border-color:#9e9e9e!important}
+.vadya-border-light-grey,.vadya-hover-border-light-grey:hover,.vadya-border-light-gray,.vadya-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+.vadya-border-dark-grey,.vadya-hover-border-dark-grey:hover,.vadya-border-dark-gray,.vadya-hover-border-dark-gray:hover{border-color:#616161!important}
+.vadya-border-pale-red,.vadya-hover-border-pale-red:hover{border-color:#ffe7e7!important}.vadya-border-pale-green,.vadya-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+.vadya-border-pale-yellow,.vadya-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.vadya-border-pale-blue,.vadya-hover-border-pale-blue:hover{border-color:#e7ffff!important}

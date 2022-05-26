@@ -5,9 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
-        <link rel="stylesheet" type="text/css" href="home.css" media="screen" />        
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="site_style.css" media="screen" />        
+        <link rel="stylesheet" type="text/css" href="utility.css" media="screen" />        
+        <script src="sidebar.js"></script>
         <style>
             html, body, h1, h2, h3, h4, h5, h6 { 
                 font-family: "Roboto", sans-serif 
@@ -16,8 +18,11 @@
     </head>
     <body>
         <!-- ### Sidebar/Menu ### -->
-        <nav class="sidebar" style="z-index:3; width:300px;" id="sidebar"><br>
-            <div class="container">
+        <nav class="sidebar vadya-animate-left vadya-white" style="z-index:3; width:300px;" id="mySidebar"><br>
+            <div class="vadya.container">
+                <a href="#" onclick="sidebar_close()" class="hide-large vadya-right vadya-xxlarge padding vadya-hover-grey" title="close menu">
+                    <i class="fa fa-remove"></i>
+                </a>
                 <a href="default.asp">Vadim Maltsev</a>
                 <a href="news.asp">Healthcare</a>
                 <a href="contact.asp">Senior Living</a>
