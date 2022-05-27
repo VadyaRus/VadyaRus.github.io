@@ -56,6 +56,11 @@ strong {
     font-weight: var(--fw-bold);
 }
 
+video {
+    width: 100%;
+    height: auto;
+}
+
 /* Typography */
 
 h1, 
