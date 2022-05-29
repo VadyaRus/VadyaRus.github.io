@@ -211,6 +211,11 @@ nav {
     z-index: 1000;
 }
 
+
+.nav-toggle:focus {
+    outline: 0px solid var(--clr-accent);
+}
+
 .nav-open .nav {
     transform: translateX(0);
 }
