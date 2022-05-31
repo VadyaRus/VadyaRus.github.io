@@ -316,6 +316,10 @@ nav {
         z-index: 2;
     }
 
+    .section__title--intro {
+        max-width: 240px;
+    }
+
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -325,6 +329,20 @@ nav {
         left: -1.5em;
         width: calc(100% + 3.5em);
         padding-right: 0.5em;
+    }
+}
+
+@media (min-width: 800px) {
+    .section__title--intro {
+        max-width: 440px;
+        font-size: var(--fs-h2);
+    }
+}
+
+@media (min-width: 1000px) {
+    .section__title--intro {
+        max-width: 640px;
+        font-size: var(--fs-h1);
     }
 }
 
@@ -450,8 +468,8 @@ nav {
 
 .portfolio__img {
     transition: 
-        transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
-        opacity 250ms linear;
+    transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+    opacity 250ms linear;
 }
 
 .portfolio__item:focus {
