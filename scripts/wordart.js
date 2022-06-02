@@ -10,22 +10,26 @@ anychart.onDocumentReady(function() {
         chart.textSpacing(5);
 
         // set the mode of the tag cloud
-        //chart.mode("rect");
+        chart.mode("spiral");
 
         chart.tooltip(false);
+        chart.fontFamily('Arial');
+        chart.fontVariant('small-caps');
 
         // Display the word cloud chart
         chart.container('container');
 
-        // Configure visual settings of the chart
-        chart.normal().fontSize(18);        
-        chart.normal().fill("#fff", 0.5);
-        chart.normal().fontStyle('normal')
 
-        chart.hovered().fontSize(22);
+        // Configure visual settings of the chart
+        //chart.normal().height(12);        
+        chart.normal().fill("#fff", 0.5);
+        chart.selected().fill("#fff", 0.5);
+        //chart.selected().fontWeight(700);
+
+        //chart.hovered().fontSize(22);
         chart.hovered().fill("#fff", 0.5);
         //chart.hovered().stroke("#303030", 0.1);
-        chart.hovered().fontStyle('bold')
+        //chart.hovered().fontWeight(700);
 
         // Set background to be completely transparent
         var background = chart.background();        
