@@ -571,3 +571,24 @@ footer a {
         margin: 0 auto;
     }
 }
+
+/* Gallery Page */
+
+.gallery {
+    position: relative;
+    padding: 2em;
+}
+
+.section__title--gallery {
+    width: 100%;    
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .section__title--gallery {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: var(--width-max);
+    }
+}
