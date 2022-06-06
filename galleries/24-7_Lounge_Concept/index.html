@@ -16,8 +16,21 @@
         <script src="/src/jqery-3.6.0/jquery-3.6.0.js"></script>
 
         <!-- Load in the lightbox script and styling. -->
-        <link rel="stylesheet" type="text/css" href="/src/lightbox2-2.11.3/css/lightbox.css" />       
-        <script src="/src/lightbox2-2.11.3/js/lightbox.js" defer></script>
+        <!-- 
+            <link rel="stylesheet" type="text/css" href="/src/lightbox2-2.11.3/css/lightbox.css" />       
+            <script src="/src/lightbox2-2.11.3/js/lightbox.js" defer></script>            
+        -->
+        <script type="module">
+            import PhotoSwipeLightbox from '/src/PhotoSwipe-5.2.2/photoswipe-lightbox.esm.js';
+            import PhotoSwipe from '/src/PhotoSwipe-5.2.2/photoswipe.esm.js';
+            const lightbox = new PhotoSwipeLightbox({
+                gallery: '#gallery',
+                children: 'a',
+                pswpModule: PhotoSwipe
+            });
+            lightbox.init();
+        </script>
+        <link rel="stylesheet" href="/src/PhotoSwipe-5.2.2/photoswipe.css">
 
         <link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen" />       
         <script src="/scripts/index.js" defer></script>        
@@ -57,12 +70,14 @@
         </section>
 
         <!-- ### PORTFOLIO ITEM INDIVIDUAL ### -->
-        <div class="portfolio">
+        <div class="portfolio pswp-gallery" id="gallery">
 
             <!-- Portfolio Item 01 -->
-            <a class="portfolio__item example-image-link"  
+            <a class="portfolio__item"
                 href="Nitro Brew View 2.jpg" 
-                data-lightbox="example-set" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Nitro Brew View 2">
                 <img class="portfolio__img example-image" src="Nitro Brew View 2.jpg" alt="">
             </a>
@@ -70,7 +85,9 @@
             <!-- Portfolio Item 02 -->
             <a class="portfolio__item example-image-link" 
                 href="Nitro Brew View 3.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Nitro Brew View 3">
                 <img class="portfolio__img example-image" src="Nitro Brew View 3.jpg" alt="">
             </a>
@@ -78,7 +95,9 @@
             <!-- Portfolio Item 03 -->
             <a class="portfolio__item example-image-link" 
                 href="Nitro Brew View 1.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Nitro Brew View 1">
                 <img class="portfolio__img example-image" src="Nitro Brew View 1.jpg" alt="">
             </a>
@@ -86,7 +105,9 @@
             <!-- Portfolio Item 04 -->
             <a class="portfolio__item example-image-link" 
                 href="Self Order Kiosk.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Self Order Kiosk">
                 <img class="portfolio__img example-image" src="Self Order Kiosk.jpg" alt="">
             </a>
@@ -94,7 +115,9 @@
             <!-- Portfolio Item 05 -->
             <a class="portfolio__item example-image-link" 
                 href="Essentials.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Essentials">
                 <img class="portfolio__img example-image" src="Essentials.jpg" alt="">
             </a>
@@ -102,7 +125,9 @@
             <!-- Portfolio Item 06 -->
             <a class="portfolio__item example-image-link" 
                 href="Grain Bowls.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Grain Bowls">
                 <img class="portfolio__img example-image" src="Grain Bowls.jpg" alt="">
             </a>
@@ -110,7 +135,9 @@
             <!-- Portfolio Item 07 -->
             <a class="portfolio__item example-image-link" 
                 href="At Your Fingertips View 2.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="At Your Fingertips View 2">
                 <img class="portfolio__img example-image" src="At Your Fingertips View 2.jpg" alt="">
             </a>
@@ -118,7 +145,9 @@
             <!-- Portfolio Item 08 -->
             <a class="portfolio__item example-image-link" 
                 href="At Your Fingertips View 3.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="At Your Fingertips View 3">
                 <img class="portfolio__img example-image" src="At Your Fingertips View 3.jpg" alt="">
             </a>
@@ -126,7 +155,9 @@
             <!-- Portfolio Item 09 -->
             <a class="portfolio__item example-image-link" 
                 href="At Your Fingertips View 1.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="At Your Fingertips View 1">
                 <img class="portfolio__img example-image" src="At Your Fingertips View 1.jpg" alt="">
             </a>
@@ -135,7 +166,9 @@
             <!-- Portfolio Item 10 -->
             <a class="portfolio__item example-image-link" 
                 href="Quiet Zone View 1.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Quiet Zone View 1">
                 <img class="portfolio__img example-image" src="Quiet Zone View 1.jpg" alt="">
             </a>
@@ -143,7 +176,9 @@
             <!-- Portfolio Item 11 -->
             <a class="portfolio__item example-image-link" 
                 href="Quiet Zone View 2.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Quiet Zone View 2">
                 <img class="portfolio__img example-image" src="Quiet Zone View 2.jpg" alt="">
             </a>
@@ -151,7 +186,9 @@
             <!-- Portfolio Item 12 -->
             <a class="portfolio__item example-image-link" 
                 href="Quiet Zone View 4.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Quiet Zone View 4">
                 <img class="portfolio__img example-image" src="Quiet Zone View 4.jpg" alt="">
             </a>
@@ -159,7 +196,9 @@
             <!-- Portfolio Item 13 -->
             <a class="portfolio__item example-image-link" 
                 href="Quiet Zone View 3.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Quiet Zone View 3">
                 <img class="portfolio__img example-image" src="Quiet Zone View 3.jpg" alt="">
             </a>
@@ -167,7 +206,9 @@
             <!-- Portfolio Item 14 -->
             <a class="portfolio__item example-image-link" 
                 href="Time Saving Tech.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Time Saving Tech">
                 <img class="portfolio__img example-image" src="Time Saving Tech.jpg" alt="">
             </a>
@@ -175,7 +216,9 @@
             <!-- Portfolio Item 15 -->
             <a class="portfolio__item example-image-link" 
                 href="Hot Tea.jpg" 
-                data-lightbox="example-set"
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank"
                 data-title="Hot Tea">
                 <img class="portfolio__img example-image" src="Hot Tea.jpg" alt="">
             </a>
