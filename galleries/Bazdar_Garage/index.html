@@ -9,6 +9,7 @@
         <!-- Fonts used by the website -->
         <link rel="stylesheet" href="/fonts/blackgold-cufonfonts-webfont/style.css"/>
         <link rel="stylesheet" href="/fonts/poppins-cufonfonts-webfont/style.css"/>
+
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/f59ee6e65d.js" crossorigin="anonymous"></script>
 
@@ -16,11 +17,13 @@
         <script src="/src/jqery-3.6.0/jquery-3.6.0.js"></script>
 
         <!-- Load in the lightbox script and styling. -->
-        <link rel="stylesheet" type="text/css" href="/src/lightbox2-2.11.3/css/lightbox.css" />       
-        <script src="/src/lightbox2-2.11.3/js/lightbox.js" defer></script>
+        <script src="/scripts/lightbox.js" type="module"></script>
+        <link rel="stylesheet" href="/src/PhotoSwipe-5.2.2/photoswipe.css">
+        <link rel="stylesheet" href="/styles/lightbox-caption.css">
 
         <link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen" />       
-        <script src="/scripts/index.js" defer></script>        
+        <link rel="stylesheet" type="text/css" href="/styles/style_gallery.css" media="screen" />       
+        <script src="/scripts/index.js" defer></script>    
     </head>
     <body>
         <!-- ### HEADER ### -->
@@ -55,46 +58,51 @@
         </section>
 
         <!-- ### PORTFOLIO ITEM INDIVIDUAL ### -->
-        <div class="portfolio">
+        <div class="portfolio pswp-gallery" id="gallery">
 
             <!-- Portfolio Item 01 -->
-            <a class="portfolio__item example-image-link"  
-                href="Exterior - View 1.jpg" 
-                data-lightbox="example-set" 
-                data-title="Exterior - View 1">
-                <img class="portfolio__img example-image" src="Exterior - View 1.jpg" alt="">
+            <a class="portfolio__item"  
+                href="images/Exterior - View 1.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_ExteriorView1.jpg" alt="Exterior - View 1">
             </a>
 
             <!-- Portfolio Item 02 -->
-            <a class="portfolio__item example-image-link"  
-                href="Exterior - View 2.jpg" 
-                data-lightbox="example-set" 
-                data-title="Exterior - View 2">
-                <img class="portfolio__img example-image" src="Exterior - View 2.jpg" alt="">
+            <a class="portfolio__item"  
+                href="images/Exterior - View 2.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_ExteriorView2.jpg" alt="Exterior - View 2">
             </a>
 
             <!-- Portfolio Item 03 -->
-            <a class="portfolio__item example-image-link"  
-                href="Interior - View 1.jpg" 
-                data-lightbox="example-set" 
-                data-title="Interior - View 1">
-                <img class="portfolio__img example-image" src="Interior - View 1.jpg" alt="">
+            <a class="portfolio__item"  
+                href="images/Interior - View 1.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_InteriorView1.jpg" alt="Interior - View 1">
             </a>
 
             <!-- Portfolio Item 04 -->
-            <a class="portfolio__item example-image-link"  
-                href="Interior - View 1.jpg" 
-                data-lightbox="example-set" 
-                data-title="Interior - View 1">
-                <img class="portfolio__img example-image" src="Interior - View 2.jpg" alt="">
+            <a class="portfolio__item"  
+                href="images/Interior - View 2.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_InteriorView2.jpg" alt="Interior - View 2">
             </a>
 
             <!-- Portfolio Item 05 -->
-            <a class="portfolio__item example-image-link"  
-                href="Interior - View 1.jpg" 
-                data-lightbox="example-set" 
-                data-title="Interior - View 1">
-                <img class="portfolio__img example-image" src="Interior - View 3.jpg" alt="">
+            <a class="portfolio__item"  
+                href="images/Interior - View 3.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_InteriorView3.jpg" alt="Interior - View 3">
             </a>
             
         </div>
