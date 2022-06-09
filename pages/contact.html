@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vadim Maltsev - Contact Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
+
+        <!-- Fonts used by the website -->
+        <link rel="stylesheet" href="/fonts/blackgold-cufonfonts-webfont/style.css"/>
+        <link rel="stylesheet" href="/fonts/poppins-cufonfonts-webfont/style.css"/>
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/f59ee6e65d.js" crossorigin="anonymous"></script>
+
+        <!-- EmailJS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('m1Xb7kRJ0LhClyVBC');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_bx7vz0s', 'template_lywf8ka', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen" />
+        <script src="/scripts/index.js" defer></script>
+    </head>
+    <body>
+        <!-- ### HEADER ### -->
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo.svg" alt="">
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <form id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <label>Name</label>
+            <input type="text" name="user_name">
+            <label>Email</label>
+            <input type="email" name="user_email">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+
+        <!-- ### FOOTER ### -->
+        <footer>
+            <a href="mailto:vadyarus@gmail.com" class="footer__link">vadyarus@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/vadim-maltsev-15651097/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UCZWKKoTvXv1oIoXZbbfNQSQ">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/vadyarus">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
