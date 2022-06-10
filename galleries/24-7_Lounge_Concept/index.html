@@ -9,6 +9,7 @@
         <!-- Fonts used by the website -->
         <link rel="stylesheet" href="/fonts/blackgold-cufonfonts-webfont/style.css"/>
         <link rel="stylesheet" href="/fonts/poppins-cufonfonts-webfont/style.css"/>
+        
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/f59ee6e65d.js" crossorigin="anonymous"></script>
 
@@ -16,168 +17,188 @@
         <script src="/src/jqery-3.6.0/jquery-3.6.0.js"></script>
 
         <!-- Load in the lightbox script and styling. -->
-        <link rel="stylesheet" type="text/css" href="/src/lightbox2-2.11.3/css/lightbox.css" />       
-        <script src="/src/lightbox2-2.11.3/js/lightbox.js" defer></script>
+        <script src="/scripts/lightbox.js" type="module"></script>
+        <link rel="stylesheet" href="/src/PhotoSwipe-5.2.2/photoswipe.css">
+        <link rel="stylesheet" href="/styles/lightbox-caption.css">
 
         <link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen" />       
+        <link rel="stylesheet" type="text/css" href="/styles/style_gallery.css" media="screen" />       
         <script src="/scripts/index.js" defer></script>        
     </head>
     <body>
         <!-- ### HEADER ### -->
-        <header>
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/logo.svg" alt="">
-                </a>
+        <header class="section__header">
+            <div class="section__header--container">
+                <div class="section__header--logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" alt="">
+                    </a>
+                </div>
+                <button class="section__header--nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="section__header--nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="/#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="/#services" class="nav__link">My Services</a></li>
+                        <li class="nav__item"><a href="/#about" class="nav__link">About me</a></li>
+                        <li class="nav__item"><a href="/#work" class="nav__link">My Work</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="/#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="/#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="/#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="/#work" class="nav__link">My Work</a></li>
-                </ul>
-            </nav>
         </header>
 
         <!-- ### INTRODUCTION ### -->
         <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
+            <h1 class="section__title section__title--gallery">
                 <strong>24-7 Lounge Concept</strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Morrison Healthcare</p>
-            <div class="intro__img-container">
-                <img src="Nitro Brew View 2.jpg" alt="" class="intro__img-portfolio-item">
-            </div>
+            <!--
+                <p class="section__subtitle section__subtitle--intro">Morrison Healthcare</p>
+                <div class="intro__img-container">
+                    <img src="Nitro Brew View 2.jpg" alt="" class="intro__img-portfolio-item">
+                </div>
+            -->
         </section>
 
         <!-- ### PORTFOLIO ITEM INDIVIDUAL ### -->
-        <div class="portfolio">
+        <div class="portfolio pswp-gallery" id="gallery">
 
             <!-- Portfolio Item 01 -->
-            <a class="portfolio__item example-image-link"  
-                href="Nitro Brew View 2.jpg" 
-                data-lightbox="example-set" 
-                data-title="Nitro Brew View 2">
-                <img class="portfolio__img example-image" src="Nitro Brew View 2.jpg" alt="">
+            <a class="portfolio__item"
+                href="images/Nitro Brew View 2.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_NitroBrewView2.jpg" alt="Nitro Brew View 2">
             </a>
             
             <!-- Portfolio Item 02 -->
-            <a class="portfolio__item example-image-link" 
-                href="Nitro Brew View 3.jpg" 
-                data-lightbox="example-set"
-                data-title="Nitro Brew View 3">
-                <img class="portfolio__img example-image" src="Nitro Brew View 3.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Nitro Brew View 3.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_NitroBrewView3.jpg" alt="Nitro Brew View 3">
             </a>
             
             <!-- Portfolio Item 03 -->
-            <a class="portfolio__item example-image-link" 
-                href="Nitro Brew View 1.jpg" 
-                data-lightbox="example-set"
-                data-title="Nitro Brew View 1">
-                <img class="portfolio__img example-image" src="Nitro Brew View 1.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Nitro Brew View 1.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_NitroBrewView1.jpg" alt="Nitro Brew View 1">
             </a>
             
             <!-- Portfolio Item 04 -->
-            <a class="portfolio__item example-image-link" 
-                href="Self Order Kiosk.jpg" 
-                data-lightbox="example-set"
-                data-title="Self Order Kiosk">
-                <img class="portfolio__img example-image" src="Self Order Kiosk.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Self Order Kiosk.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_SelfOrderKiosk.jpg" alt="Self Order Kiosk">
             </a>
             
             <!-- Portfolio Item 05 -->
-            <a class="portfolio__item example-image-link" 
-                href="Essentials.jpg" 
-                data-lightbox="example-set"
-                data-title="Essentials">
-                <img class="portfolio__img example-image" src="Essentials.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Essentials.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_Essentials.jpg" alt="Essentials">
             </a>
             
             <!-- Portfolio Item 06 -->
-            <a class="portfolio__item example-image-link" 
-                href="Grain Bowls.jpg" 
-                data-lightbox="example-set"
-                data-title="Grain Bowls">
-                <img class="portfolio__img example-image" src="Grain Bowls.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Grain Bowls.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_GrainBowls.jpg" alt="Grain Bowls">
             </a>
             
             <!-- Portfolio Item 07 -->
-            <a class="portfolio__item example-image-link" 
-                href="At Your Fingertips View 2.jpg" 
-                data-lightbox="example-set"
-                data-title="At Your Fingertips View 2">
-                <img class="portfolio__img example-image" src="At Your Fingertips View 2.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/At Your Fingertips View 2.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_AtYourFingertipsView2.jpg" alt="At Your Fingertips View 2">
             </a>
             
             <!-- Portfolio Item 08 -->
-            <a class="portfolio__item example-image-link" 
-                href="At Your Fingertips View 3.jpg" 
-                data-lightbox="example-set"
-                data-title="At Your Fingertips View 3">
-                <img class="portfolio__img example-image" src="At Your Fingertips View 3.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/At Your Fingertips View 3.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_AtYourFingertipsView3.jpg" alt="At Your Fingertips View 3">
             </a>
             
             <!-- Portfolio Item 09 -->
-            <a class="portfolio__item example-image-link" 
-                href="At Your Fingertips View 1.jpg" 
-                data-lightbox="example-set"
-                data-title="At Your Fingertips View 1">
-                <img class="portfolio__img example-image" src="At Your Fingertips View 1.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/At Your Fingertips View 1.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_AtYourFingertipsView1.jpg" alt="At Your Fingertips View 1">
             </a>
             </a>
             
             <!-- Portfolio Item 10 -->
-            <a class="portfolio__item example-image-link" 
-                href="Quiet Zone View 1.jpg" 
-                data-lightbox="example-set"
-                data-title="Quiet Zone View 1">
-                <img class="portfolio__img example-image" src="Quiet Zone View 1.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Quiet Zone View 1.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_QuietZoneView1.jpg" alt="Quiet Zone View 1">
             </a>
 
             <!-- Portfolio Item 11 -->
-            <a class="portfolio__item example-image-link" 
-                href="Quiet Zone View 2.jpg" 
-                data-lightbox="example-set"
-                data-title="Quiet Zone View 2">
-                <img class="portfolio__img example-image" src="Quiet Zone View 2.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Quiet Zone View 2.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_QuietZoneView2.jpg" alt="Quiet Zone View 2">
             </a>
 
             <!-- Portfolio Item 12 -->
-            <a class="portfolio__item example-image-link" 
-                href="Quiet Zone View 4.jpg" 
-                data-lightbox="example-set"
-                data-title="Quiet Zone View 4">
-                <img class="portfolio__img example-image" src="Quiet Zone View 4.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Quiet Zone View 4.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_QuietZoneView4.jpg" alt="Quiet Zone View 4">
             </a>
 
             <!-- Portfolio Item 13 -->
-            <a class="portfolio__item example-image-link" 
-                href="Quiet Zone View 3.jpg" 
-                data-lightbox="example-set"
-                data-title="Quiet Zone View 3">
-                <img class="portfolio__img example-image" src="Quiet Zone View 3.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Quiet Zone View 3.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_QuietZoneView3.jpg" alt="Quiet Zone View 3">
             </a>
 
             <!-- Portfolio Item 14 -->
-            <a class="portfolio__item example-image-link" 
-                href="Time Saving Tech.jpg" 
-                data-lightbox="example-set"
-                data-title="Time Saving Tech">
-                <img class="portfolio__img example-image" src="Time Saving Tech.jpg" alt="">
+            <a class="portfolio__item" 
+                href="images/Time Saving Tech.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_TimeSavingTech.jpg" alt="Time Saving Tech">
             </a>
 
             <!-- Portfolio Item 15 -->
-            <a class="portfolio__item example-image-link" 
-                href="Hot Tea.jpg" 
-                data-lightbox="example-set"
-                data-title="Hot Tea">
-                <img class="portfolio__img example-image" src="Hot Tea.jpg" alt="">
-            </a>
-            
+            <a class="portfolio__item" 
+                href="images/Hot Tea.jpg" 
+                data-pswp-width="3840"
+                data-pswp-height="2160"
+                target="_blank">
+                <img class="portfolio__img example-image" src="thumbs/thumb_HotTea.jpg" alt="Hot Tea">
+            </a>            
         </div>
         <!-- ### FOOTER ### -->
         <footer>
