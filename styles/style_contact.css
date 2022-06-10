@@ -1,0 +1,14 @@
+.section__contact {
+    text-align: center;
+}
+
+.section__contact label {
+    font-family: var(--ff-primary);
+}
+
+@media (min-width: 768px) {
+    .section__contact {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

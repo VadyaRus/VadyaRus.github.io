@@ -38,6 +38,7 @@
         </script>
 
         <link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/styles/style_contact.css" media="screen" />
         <script src="/scripts/index.js" defer></script>
     </head>
     <body>
@@ -60,17 +61,18 @@
                 </ul>
             </nav>
         </header>
-        
-        <form id="contact-form">
-            <input type="hidden" name="contact_number" />
-            <label>Name</label>
-            <input type="text" name="user_name">
-            <label>Email</label>
-            <input type="email" name="user_email">
-            <label>Message</label>
-            <textarea name="message"></textarea>
-            <input type="submit" value="Send">
-        </form>
+
+        <!-- ### CONTACT ### -->
+        <section class="section__contact">
+            <h1 class="section__contact--header">Contact</h1>
+            <form id="contact-form">
+                <input type="hidden" name="contact_number"/>
+                <input type="text" placeholder="Name" required name="contact_name">
+                <input type="email" placeholder="Your email address" required name="contact_email">
+                <textarea name="message" placeholder="Message" required name="message"></textarea>
+                <input class="btn" type="submit" value="Submit">
+            </form>
+        </section>        
 
         <!-- ### FOOTER ### -->
         <footer>
