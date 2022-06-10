@@ -28,10 +28,12 @@
             function onSubmit(token) {                
                 console.log('submitting...');
 
+                var form = document.getElementById('contact-form');
+
                 // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
+                form.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm('service_bx7vz0s', 'template_lywf8ka', document.getElementById('contact-form'))
+                emailjs.sendForm('service_bx7vz0s', 'template_lywf8ka', form)
                     .then(function() {
                         console.log('SUCCESS!');
                     }, function(error) {
