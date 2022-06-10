@@ -25,6 +25,21 @@
         </script>
 
         <script type="text/javascript">
+            function onSuccess() {
+                console.log('SUCCESS!');
+
+                document.getElementById('contact-form').classList.add('hidden');
+                document.getElementById('contact-success').classList.remove('hidden');
+            }
+            
+            function onFailure(error) {
+                console.log('FAILED...', error);
+
+                document.getElementById('contact-form').classList.add('hidden');
+                document.getElementById('contact-failed').classList.remove('hidden');
+                document.getElementById('response-code').innerText = error;
+            }
+
             function onSubmit(token) {                
                 console.log('submitting...');
 
@@ -35,9 +50,9 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_bx7vz0s', 'template_lywf8ka', form)
                     .then(function() {
-                        console.log('SUCCESS!');
+                        onSuccess();
                     }, function(error) {
-                        console.log('FAILED...', error);
+                        onFailure(error);
                     }
                 );
             }
@@ -50,10 +65,10 @@
                 console.log('validating...');
             }
 
-            window.onload = function() {
+            window.onload = function() {                
                 document.getElementById('contact-form').addEventListener('submit', function(event) {
                     validate(event);
-                });
+                });            
             }
         </script>
 
@@ -86,8 +101,9 @@
 
         <!-- ### CONTACT ### -->
         <section class="section__contact">
-            <h1 class="section__contact--header">Contact</h1>
             <form class="section__contact--form" id="contact-form" method="POST">
+                <h1 class="section__contact--header">Contact</h1>
+
                 <input type="text" hidden name="contact_number"/>
                 <input class="section__contact--input" type="text" placeholder="Name" required name="contact_name">
                 <input class="section__contact--input" type="email" placeholder="Your email address" required name="contact_email">
@@ -106,7 +122,22 @@
                     <br>the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and 
                     <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
             </form>
-        </section>        
+
+            <div class="section__contact--success hidden" id="contact-success">                
+                <h2>Thank you!</h2>
+                <h3>Your submission has been received.</h3>
+                <i class="fa-solid fa-circle-check section__contact--icon"></i>
+                <a href="/" class="btn">Go to Homepage</a>
+            </div>
+
+            <div class="section__contact--failed hidden" id="contact-failed">
+                <h2>Uh oh!</h2>
+                <h3>Something went wrong!</h3>
+                <i class="fa-solid fa-bug section__contact--icon"></i>
+                <p id="response-code">bloop</p>
+                <a href="/" class="btn">Go to Homepage</a>
+            </div>
+        </section>
 
         <!-- ### FOOTER ### -->
         <footer>

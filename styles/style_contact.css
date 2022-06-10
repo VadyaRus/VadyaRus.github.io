@@ -60,6 +60,24 @@
     color: inherit;
 }
 
+.section__contact--icon {
+    padding: 0.25em;
+    font-size: 6em;
+    color: var(--clr-accent);
+}
+
+.section__contact--success {
+    padding: 2em;
+}
+
+.section__contact--failed {
+    padding: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .section__contact {
         max-width: 1000px;
