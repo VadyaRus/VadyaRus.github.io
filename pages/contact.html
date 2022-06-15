@@ -23,8 +23,6 @@
                 'page_title': 'Contact',
                 'currency': 'USD'
             });
-
-            gtag('event', 'contact', { 'method': 'onSubmit'});
         </script>
 
         <!-- reCAPTCHA site key  -->
@@ -42,21 +40,30 @@
         <script type="text/javascript">
             function onSuccess() {
                 console.log('SUCCESS!');
-
+                
+                // Fire the google analytics contact success event
+                gtag('event', 'contact_success');
+                
                 document.getElementById('contact-form').classList.add('hidden');
                 document.getElementById('contact-success').classList.remove('hidden');
             }
             
             function onFailure(error) {
                 console.log('FAILED...', error);
-
+                
+                // Fire the google analytics contact failed event
+                gtag('event', 'contact_failed');
+                
                 document.getElementById('contact-form').classList.add('hidden');
                 document.getElementById('contact-failed').classList.remove('hidden');
                 document.getElementById('response-code').innerText = error;
             }
-
+            
             function onSubmit(token) {                
                 console.log('submitting...');
+
+                // Fire the google analytics contact submit event
+                gtag('event', 'contact_submit');
 
                 var form = document.getElementById('contact-form');
 
