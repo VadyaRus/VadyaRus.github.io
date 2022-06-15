@@ -54,7 +54,7 @@
 
                 // Parse the form fields
                 gtag('set', 'user_properties', {
-                    'crm_id': 'USER_ID',
+                    'crm_id': form.contact_number.value,
                     'crm_name': form.contact_name.value,
                     'crm_email': form.contact_email.value                    
                 });
@@ -83,7 +83,7 @@
                 var form = document.getElementById('contact-form');
 
                 // generate a five digit number for the contact_number variable
-                form.contact_number.value = 'USER_ID';
+                form.contact_number.value = Math.random() * 100000 | 0;
 
                 // these IDs from the previous steps
                 emailjs.sendForm('service_bx7vz0s', 'template_lywf8ka', form)
