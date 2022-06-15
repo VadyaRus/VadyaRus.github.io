@@ -19,7 +19,12 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-HNHD3090QK');
+            gtag('config', 'G-HNHD3090QK', {
+                'page_title': 'Contact',
+                'currency': 'USD'
+            });
+
+            gtag('event', 'contact', { 'method': 'onSubmit'});
         </script>
 
         <!-- reCAPTCHA site key  -->
