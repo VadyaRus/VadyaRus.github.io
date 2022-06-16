@@ -40,8 +40,8 @@ function onSubmit(token) {
 
     var form = document.getElementById('contact-form');
 
-    // generate a five digit number for the contact_number variable
-    form.contact_number.value = Math.random() * 100000 | 0;
+    // grab the user_id cookie for the contact_number value
+    form.contact_number.value = getCookie('user_id');
 
     // these IDs from the previous steps
     emailjs.sendForm('service_bx7vz0s', 'template_lywf8ka', form)
