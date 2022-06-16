@@ -13,6 +13,9 @@
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/f59ee6e65d.js" crossorigin="anonymous"></script>
 
+        <!-- Cookie utilities -->
+        <script src="/scripts/cookie_utils.js"></script>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNHD3090QK"></script>
         <script>
@@ -20,8 +23,11 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
+            check_user_id();
+            user_id = getCookie('user_id');
+
             gtag('config', 'G-HNHD3090QK', {
-                'user_id': 'USER_ID',
+                'user_id': user_id,
                 'page_title': '24/7 Lounge Concept',
                 'page_location': 'https://vadyarus.github.io/galleries/24-7_lounge_concept',
                 'currency': 'USD'
