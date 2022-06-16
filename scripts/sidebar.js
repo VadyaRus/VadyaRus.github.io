@@ -1,9 +1,12 @@
-function sidebar_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
+const navToggle = document.querySelector('.section__header--nav-toggle');
+const navLinks = document.querySelectorAll('.nav__link');
 
-function sidebar_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+navToggle.addEventListener('click', ()=>{
+    document.body.classList.toggle('nav-open');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', ()=>{
+        document.body.classList.remove('nav-open');
+    })
+});
