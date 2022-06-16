@@ -27,8 +27,8 @@ function check_user_id(){
     //console.log('found user id cookie');
   }
   else {
-      // generate a five digit number for the user_id variable
-      user_id = Math.random() * 100000 | 0;
+      // generate a seven digit number for the user_id variable
+      user_id = Math.random() * 10000000 | 0;
 
       if(user_id != "" && user_id != null) {
           setCookie('user_id', user_id, 28);
