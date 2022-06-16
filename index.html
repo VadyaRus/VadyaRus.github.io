@@ -30,6 +30,13 @@
         <!-- Script to send link clicks to Google Analytics -->
         <script src="/scripts/analytics.js" defer></script>
 
+        <script src="/scripts/cookie.js" defer></script>
+        <script>
+            window.onload = function() {                
+                checkCookie();        
+            }
+        </script>
+
         <link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/styles/style_index.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/styles/style_gallery.css" media="screen" />
