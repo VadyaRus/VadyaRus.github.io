@@ -1,20 +1,19 @@
 /* Gallery Page */
 
 .gallery {
+    background-color: var(--clr-dark);
     position: relative;
-    padding: 2em;
-}
-
-.section__title--gallery {
-    width: 100%;    
+    color: var(--clr-light);
+    padding: 2em 0 0 0;
     text-align: center;
+    width: 100%;    
 }
 
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: var(--width-max);
-    margin: 0 auto;
+    margin: 2em auto 0 auto;
 }
 
 .portfolio__item {
@@ -44,12 +43,20 @@
     transform: scale(1.2);
     opacity: 0.75;
 }
-
+/*
 @media (min-width: 1000px) {
-    .section__title--gallery {
+    .gallery {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: var(--width-max);
     }
 }
+
+.yt-cover {
+    position: fixed;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+}
+*/
